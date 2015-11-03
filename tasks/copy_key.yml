@@ -1,0 +1,9 @@
+---
+  - name: mkdir .ssh
+    file: dest=/home/devuser/.ssh owner=devuser mode=0700 state=directory
+
+  - name: add key to .ssh
+    copy: src=/home/qqq/.ssh/hypersun_server dest=/home/devuser/.ssh/hypersun_server mode=0644 owner=devuser force=yes
+
+  - name: add  to .ssh 
+    copy: src=/home/qqq/.ssh/authorized_keys dest=/home/devuser/.ssh/authorized_keys mode=0644 owner=devuser force=yes
